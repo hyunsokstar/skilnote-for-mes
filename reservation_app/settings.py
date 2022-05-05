@@ -176,7 +176,7 @@ INTERNAL_IPS = [
 ]
 
 SUMMERNOTE_CONFIG = {
-    'attachment_filesize_limit': 10 * 1024 * 1024
+    'attachment_filesize_limit': 20 * 1024 * 1024
 }
 
 X_FRAME_OPTIONS = 'ALLOWALL'
