@@ -19,7 +19,7 @@ from django.utils.datastructures import MultiValueDictKeyError
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # 11111111111111111111
-## 수정
+## hyun_dev update
 
 # 1122 +@ 구현
 def category_plus_a_for_current_user(request):
