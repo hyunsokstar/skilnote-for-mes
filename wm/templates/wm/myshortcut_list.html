@@ -163,6 +163,8 @@ img.Image { max-width: 100%; display: block; }
 	 </a><br>
 
 	<a href="" class="btn btn-outline-primary btn-sm" id="move_to_skilblog_btn">칼럼</a> <br>
+	<button type="button" class="btn btn-sm btn-outline-warning copy_for_page_url">링크 복사</button> <br>
+
 	<!-- <a href="" class="btn btn-outline-warning btn-sm" id="">보충 노트(구현중)</a> <br> -->
 
 </div>
@@ -748,6 +750,28 @@ $(function() {
 	}
   })
 });
+
+function copyToClipboard(text) {
+        var dummy = document.createElement("textarea");
+        // to avoid breaking orgain page when copying more words
+        // cant copy when adding below this code
+        // dummy.style.display = 'none'
+        document.body.appendChild(dummy);
+        //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+    }
+
+    $(".copy_for_page_url").click(function (e) {
+        const page_url = window.location.href; 
+        // alert("page url copy "+ page_url)
+        copyToClipboard(page_url);
+        alert("current pag url copy success !! : "+ page_url)
+    })
+
+
 
 // refer-note-for-user
 $('body').on('click', '.refer-note-for-user', function (e) {
