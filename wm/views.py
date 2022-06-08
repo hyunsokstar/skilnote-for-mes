@@ -96,7 +96,7 @@ def category_minuus_a_for_current_user(request):
         if(sn.category.id >= int(ca_num) - int(page_minus_number) and sn.category.id != int(ca_num)):
             print("삭제할 category num : ", sn.category.id)
             ########### 22
-            ca_delete_result  = MyShortCut.objects.filter(Q(author=request.user) & Q(category=sn.category.id)).delete()
+            # ca_delete_result  = MyShortCut.objects.filter(Q(author=request.user) & Q(category=sn.category.id)).delete()
 
         if(sn.category.id >= int(ca_num) and sn.category.id != 120 and int(sn.category.id) - int(page_minus_number) > 0):
             ca = Category.objects.get(id=int(sn.category.id)-int(page_minus_number))
