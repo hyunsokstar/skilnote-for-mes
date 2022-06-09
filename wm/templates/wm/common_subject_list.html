@@ -16,7 +16,7 @@
     .common_subject_container {
         display: flex;
         flex-wrap: wrap;
-        width: 1300px;
+        width: 1500px;
         gap: 8px;
         border: 1px solid black;
     }
@@ -61,7 +61,9 @@
             class="user_list_for_common_subject"
             data-id="{{common_subject.id}}"
         >
-            {{common_subject.subject}}
+        <h2 style="color: blue">
+            {{common_subject.subject}}  &nbsp; / &nbsp;
+        </h2>
         </a>
         {% if request.user.is_superuser %}
         <span class="cs_tooltiptext">
