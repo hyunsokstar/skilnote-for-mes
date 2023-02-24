@@ -49,21 +49,21 @@
     }
 </style>
 
-<div class="common_subject_container">
+<div class="common_subject_container d-flex flex-wrap">
     {% for common_subject in object_list %}
     <!-- <a href="" class="user_list_for_common_subject" data-id="{{cs.id}}">
         {{common_subject.subject}}
     </a> -->
-    <div class="cs_tooltip">
+    <div class="cs_tooltip" style="width:30%">
         <a
             href=""
             id="common_subject_el_{{common_subject.id}}"
             class="user_list_for_common_subject"
             data-id="{{common_subject.id}}"
         >
-        <h2 style="color: blue">
-            {{common_subject.subject}}  &nbsp; / &nbsp;
-        </h2>
+        <h5 style="color: blue">
+            {{common_subject.subject}}  
+        </h5>
         </a>
         {% if request.user.is_superuser %}
         <span class="cs_tooltiptext">
